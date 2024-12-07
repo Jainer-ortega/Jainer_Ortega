@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cursos de Programación - Aprende a programar desde cero con cursos interactivos y modernos.">
+  <title>Cursos de Programación</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="./img/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar__brand container">
+        <h1 class="brand-title">
+          Cursos<span>Code</span>
+        </h1>
+      </div>
+      <ul class="navbar__menu container">
+        <li><a href="#inicio" class="navbar__link">Inicio</a></li>
+        <li><a href="#cursos" class="navbar__link">Cursos</a></li>
+        <li><a href="#sobre-nosotros" class="navbar__link">Sobre Nosotros</a></li>
+        <li><a href="#contacto" class="navbar__link">Contacto</a></li>
+      </ul>
+      <button id="menu-toggle" class="navbar__toggle" aria-expanded="false" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+    
+      
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="hero__particles"></div> <!-- Fondo animado con partículas -->
+    <div class="hero__content container">
+      <h2 class="hero__title">Tu camino hacia el éxito como Programador</h2>
+      <p class="hero__description">Descubre las tecnologías clave y avanza con cursos guiados por expertos.</p>
+      <a href="#cursos" class="btn btn--primary">Explorar Cursos</a>
+    </div>
+  </section>
+  
+  
+
+  <!-- Cursos -->
+  <section id="cursos" class="courses container">
+    <h2 class="section-title">Nuestros Cursos</h2>
+    <div class="courses__grid">
+      <article class="course__item">
+        <img src="./img/course-html-css.jpg" alt="HTML y CSS" class="course__image">
+        <div class="course__content">
+          <h3 class="course__title">HTML y CSS</h3>
+          <p class="course__description">Domina las bases del desarrollo web con HTML y CSS.</p>
+          <a href="https://www.freecodecamp.org/espanol/news/aprende-html-y-css-curso-desde-cero/" target="_blank" class="btn btn--secondary">Ver Curso</a>
+        </div>
+      </article>
+      <article class="course__item">
+        <img src="./img/JavaScript.png" alt="JavaScript" class="course__image">
+        <div class="course__content">
+          <h3 class="course__title">JavaScript</h3>
+          <p class="course__description">Crea páginas dinámicas y potentes con JavaScript.</p>
+          <a href="https://javascript.info/" target="_blank" class="btn btn--secondary">Ver Curso</a>
+        </div>
+      </article>
+      <article class="course__item">
+        <img src="./img/python.jpg" alt="Python" class="course__image">
+        <div class="course__content">
+          <h3 class="course__title">Python</h3>
+          <p class="course__description">Explora desarrollo web, análisis de datos y más con Python.</p>
+          <a href="https://www.w3schools.com/python/" target="_blank" class="btn btn--secondary">Ver Curso</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  
+  
+
+  <!-- Sobre Nosotros -->
+  <section id="sobre-nosotros" class="about">
+    <div class="about__content container">
+      <h2 class="section-title">Sobre Nosotros</h2>
+      <div class="about__wrapper">
+        <div class="about__text">
+          <p>
+            En <strong>CursosCode</strong>, nos dedicamos a transformar la educación tecnológica con un enfoque práctico y accesible. Nuestra misión es empoderar a estudiantes, profesionales y entusiastas de la programación con habilidades que realmente importan en la era digital.
+          </p>
+          <p>
+            Desde los fundamentos hasta niveles avanzados, ofrecemos contenido de alta calidad para todos los niveles. Creemos firmemente que aprender a programar no solo abre puertas profesionales, sino que también fomenta la creatividad, el pensamiento crítico y la resolución de problemas.
+          </p>
+          <p><strong>¡Juntos, construyamos el futuro de la tecnología!</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Contacto -->
+  <section id="contacto" class="contact container">
+    <h2 class="section-title">Contáctanos</h2>
+    <form action="https://formspree.io/f/mvgoyboo" method="POST" class="contact__form">
+      <input type="hidden" name="_replyto" value="Jainerortega10@gmail.com"> <!-- Correo para respuestas -->
+      <input type="hidden" name="_subject" value="Nuevo mensaje desde tu página web"> <!-- Asunto del correo -->
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Tu Nombre" class="contact__input" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Tu Correo" class="contact__input" required>
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Tu Mensaje" class="contact__textarea" required></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary">Enviar</button>
+
+
+    </form>
+  </section>
+  
+  
+
+ <!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy;CursosCode Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+
+  <!-- JavaScript -->
+  <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("inicio", {
+    particles: {
+      number: { value: 80, density: { enable: true, value_area: 800 } },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3 },
+      line_linked: { enable: true, color: "#ffffff" },
+      move: { enable: true, speed: 2 }
+    }
+  });
+</script>
+
+</body>
+</html>
