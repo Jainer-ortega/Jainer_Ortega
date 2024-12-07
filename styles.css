@@ -10,6 +10,21 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+      
+.hero__particles {
+  position: absolute; /* Asegura que ocupe toda el área del contenedor padre */
+  top: 0;
+  left: 0;
+  width: 100%; /* Extiende el fondo animado en todo el ancho */
+  height: 100%; /* Extiende el fondo animado en todo el alto */
+  z-index: -1; /* Para que quede detrás del contenido */
+  pointer-events: none; /* Si no necesitas interacción con las partículas */
+}
+.hero {
+  position: relative; /* El padre debe tener `relative` para que los hijos `absolute` se alineen correctamente */
+  overflow: hidden; /* Asegúrate de que no haya partículas "salidas" */
+}
+
   }
   
   h1, h2, h3 {
