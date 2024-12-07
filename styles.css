@@ -340,47 +340,59 @@ body {
   
   /* Cursos */
   /* Cursos */
+/* General styles for the courses section */
 .courses__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.course__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.course__image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.course__content {
+  padding: 10px;
+}
+
+/* Button styling */
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.btn--secondary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .courses__grid {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    gap: 15px;
   }
-  
-  .course__item {
-    text-align: center;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-  }
-  
-  .course__item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .course__image {
-    width: 100%;
-    height: 200px; /* Ajusta esta altura según necesites */
-    object-fit: cover; /* Hace que las imágenes mantengan su proporción y se recorten si es necesario */
-    border-bottom: 3px solid #007bff;
-    border-radius: 10px 10px 0 0;
-  }
-  
-  .course__content {
-    padding: 15px;
-  }
-  
-  .course__title {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .course__description {
-    color: #555;
-    margin-bottom: 15px;
-  }
+}
   
   .btn--secondary {
     background: #28a745;
